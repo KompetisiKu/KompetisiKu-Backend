@@ -1,0 +1,12 @@
+version: '3'
+services:
+  db:
+    image: mysql
+    environment:
+      - MYSQL_PASSWORD: root
+      - MYSQL_USER: root
+      - MYSQL_DB: kompetisiku
+  app:
+    image: data_forms
+    ports:
+      - 8080:5005
