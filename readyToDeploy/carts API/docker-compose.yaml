@@ -6,8 +6,8 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-  adminer:
-    image: adminer
+  app:
+    image: carts
     restart: always
     ports:
       - 8080:5007
