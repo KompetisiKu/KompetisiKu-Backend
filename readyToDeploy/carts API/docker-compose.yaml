@@ -16,7 +16,7 @@ services:
   app:
     depends_on:
       - db
-    build: ./usr/src/app
+    build: ./app
     restart: unless-stopped
     env_file:
       - ./.env
