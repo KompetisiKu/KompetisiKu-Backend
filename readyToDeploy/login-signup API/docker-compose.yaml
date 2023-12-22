@@ -9,6 +9,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=$MYSQLDB_ROOT_PASSWORD
       - MYSQL_DATABASE=$MYSQLDB_DATABASE
+      - MYSQL_HOST=$MYSQLDB_HOST
     ports:
       - $MYSQLDB_LOCAL_PORT:$MYSQLDB_DOCKER_PORT
     volumes:
@@ -16,7 +17,7 @@ services:
   app:
     depends_on:
       - db
-    build: .
+    build: ./src
     restart: unless-stopped
     env_file:
       - ./.env
